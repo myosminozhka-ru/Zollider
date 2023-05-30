@@ -1,0 +1,32 @@
+{
+  "name": "Zollider",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "devM": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt",
+    "buildM": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt build",
+    "startM": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt start",
+    "generateM": "export NODE_OPTIONS=--openssl-legacy-provider && nuxt generate",
+    "devW": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt",
+    "buildW": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt build",
+    "startW": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt start",
+    "generateW": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt generate"
+  },
+  "dependencies": {
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "sass": "1.54.9",
+    "sass-loader": "10",
+    "swiper": "8.3.2",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.2.1"
+  }
+}

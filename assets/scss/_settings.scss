@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+//Scroll
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  background: #e6e6e6;
+  position: absolute;
+  width: 6px;
+  border-radius: 4px;
+}
+::-webkit-scrollbar:hover {
+  display: block;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $accent;
+  border-radius: 4px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+  border-radius: 4px;
+}
+
+* {
+  scrollbar-color: #8bc63e #e6e6e6;
+  scrollbar-width: thin;
+}
+
+html {
+  font-family: $primary-font-family;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-animation: bugfix infinite 1s;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-style: normal;
+  font-weight: normal;
+  -webkit-animation: bugfix infinite 1s;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  color: $dark-text;
+  background-color: $light-bg;
+  font-size: 16px;
+}
+
+input,
+textarea {
+  -webkit-animation: bugfix infinite 1s;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button,
+input,
+a,
+textarea {
+  font: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+
+picture {
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  padding: 0;
+  background-color: transparent;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  width: 100%;
+  max-width: 1380px;
+  padding: 0 22px;
+  margin: 0 auto;
+  @media (max-width: $tab) {
+    padding: 0 28px;
+  }
+  @media (max-width: $mob) {
+    padding: 0 11px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
