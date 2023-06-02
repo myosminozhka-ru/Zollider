@@ -1,6 +1,10 @@
 <template>
   <div>
+    <TheHeader/>
     <Nuxt />
+    <TheFooter/>
+    <TheCookies/>
+    <WowInit/>
   </div>
 </template>
 

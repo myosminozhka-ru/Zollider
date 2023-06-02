@@ -2,6 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    base: '/Zollider/'
+  },
+
   server: {
     host: "0.0.0.0", // default: localhost // (0.0.0.0 for open on mob) // 127.0.0.1 for prod
     port: 3021,
@@ -22,7 +26,8 @@ export default {
       { name: 'theme-color', content: '#ffffff' },
     ],
     script: [
-      { src: '/wow.js', defer: true },
+      { src: '/wow.js' },
+      { src: '/imask.js' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -31,15 +36,11 @@ export default {
       { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', color: '#5bbad5', href: '/safari-pinned-tab.svg' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "@/assets/css/swiper-bundle.min.css",
     "@/assets/css/animate.min.css",
     "@/assets/scss/_fonts.scss",
     "@/assets/scss/_normalize.scss",

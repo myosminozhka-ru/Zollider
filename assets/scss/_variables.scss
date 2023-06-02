@@ -1,16 +1,22 @@
 // colors
-$accent: #80CCBF;
-$accent-hover: #84f6e3;
+$accent: #E9500E;
+$accent-hover: #FF7A40;
 $dark-text: #000000;
 $light-text: #ffffff;
-$dark-bg: #171F2C;
+$dark-bg: #000000;
 $light-bg: #ffffff;
 $grey: #BCBCBC;
 
 // breakpoints
-$tab: 1279px;
-$mob: 767px;
+$mob: 768px;
 
 // fonts
-$primary-font-family: "Inter", sans-serif;
-$secondary-font-family: "Vela Sans";
+$primary-font-family: "DIN Pro", sans-serif;
+
+// mixins
+
+@mixin mob {
+	@media (max-width: $mob) {
+		@content;
+	}
+}

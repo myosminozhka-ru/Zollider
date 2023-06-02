@@ -35,25 +35,53 @@
 
 html {
   font-family: $primary-font-family;
-  font-size: 10px;
+  font-size: 0.5208335vw;
   font-style: normal;
   font-weight: normal;
   -webkit-animation: bugfix infinite 1s;
-  line-height: 1.2;
+  line-height: 1.6;
+  letter-spacing: 0.083em;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  @include mob {
+    font-size: 2.777777vw;
+    line-height: 1.5;
+  }
 }
 
 body {
   font-style: normal;
   font-weight: normal;
   -webkit-animation: bugfix infinite 1s;
-  line-height: 1.2;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: $dark-text;
-  background-color: $light-bg;
-  font-size: 16px;
+  color: $light-text;
+  background-color: $dark-bg;
+  font-size: 1.6rem;
+  letter-spacing: 0.083em;
+  background-size: 100% 100%;
+  background-position: top center;
+  scroll-behavior: smooth;
+  &.lock {
+    overflow: hidden;
+  }
+  &.isIndexPage {
+    background-image: url(@/assets/img/bg-pc.jpg);
+  }
+  &.isFaqPage {
+    background-image: url(@/assets/img/bg-faq-pc.jpg);
+  }
+  @include mob {
+    line-height: 1.5;
+    &.isIndexPage {
+      background-image: url(@/assets/img/bg-sp.jpg);
+    }
+    &.isFaqPage {
+      background-image: url(@/assets/img/bg-faq-sp.jpg);
+    }
+  }
 }
 
 input,
@@ -145,15 +173,9 @@ input[type="number"] {
 
 .container {
   width: 100%;
-  max-width: 1380px;
-  padding: 0 22px;
+  max-width: 155.2rem;
+  padding: 0 1.6rem;
   margin: 0 auto;
-  @media (max-width: $tab) {
-    padding: 0 28px;
-  }
-  @media (max-width: $mob) {
-    padding: 0 11px;
-  }
 }
 
 .visually-hidden {
@@ -162,4 +184,98 @@ input[type="number"] {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+// ui text
+.h1 {
+  font-weight: 700;
+  font-size: 7.2rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  @include mob {
+    font-size: 4rem;
+  }
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 5.6rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  @include mob {
+    font-size: 2.8rem;
+  }
+}
+
+.h3 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  @include mob {
+    font-size: 2.8rem;
+  }
+}
+
+.accent-color {
+  color: $accent;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem 5.3rem;
+  color: $light-text;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 140%;
+  transition-property: background-color, color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  letter-spacing: 0;
+  &--accent {
+    background-color: $accent;
+    &:hover {
+      background-color: #FF7A40;
+    }
+  }
+  &--fix {
+    min-width: 35rem;
+    @include mob {
+      min-width: auto;
+    }
+  }
+  &--trans {
+    background-color: transparent;
+  }
+  &--border {
+    border: 1px solid $light-bg;
+  }
+  &--dark {
+    background-color: #173B3A;
+    &:hover {
+      background-color: #2F7371;
+    }
+  }
+  @include mob {
+    display: flex;
+    font-size: 1.6rem;
+    padding: 1.6rem;
+  }
+}
+
+.only-sp {
+  display: none;
+  @include mob {
+    display: block;
+  }
+}
+.only-pc {
+  @include mob {
+    display: none;
+  }
 }
