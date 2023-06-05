@@ -3,7 +3,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/Zollider/'
+    base: '/'
   },
 
   server: {
