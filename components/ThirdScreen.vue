@@ -57,7 +57,9 @@ export default {
     }
     @include mob {
       padding-top: 0;
-      margin-bottom: 12.7rem;
+      margin-bottom: 5.5rem;
+      position: relative;
+      z-index: 3;
       &__inner {
         background-image: url(@/assets/img/prize-bg-sp.jpg);
         padding: 0;

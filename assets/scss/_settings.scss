@@ -61,7 +61,7 @@ body {
   background-color: $dark-bg;
   font-size: 1.6rem;
   letter-spacing: 0.083em;
-  background-size: 100% 100%;
+  background-size: 100% auto;
   background-position: top center;
   scroll-behavior: smooth;
   &.lock {
