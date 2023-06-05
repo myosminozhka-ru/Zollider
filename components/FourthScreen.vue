@@ -26,7 +26,7 @@ export default {}
 </script>
 <style lang="scss" scoped>
 .block {
-  margin-bottom: 2.7rem;
+  margin-bottom: 16.7rem;
   position: relative;
   z-index: 2;
   &__inner {
