@@ -329,6 +329,12 @@ export default {
     &--msg {
       grid-column: 1/3;
     }
+    &--file {
+      padding: 1.1rem 0;
+    }
+    &--textarea {
+      margin-top: -0.1rem;
+    }
   }
   &__label {
     display: block;
@@ -339,7 +345,7 @@ export default {
     width: 100%;
     font-size: 1.8rem;
     color: $dark-text;
-    padding: 1.6rem 2.4rem;
+    padding: 1.5rem 2.4rem;
     background-color: #fff;
     border: 1px solid #fff;
     background-repeat: no-repeat;
@@ -440,6 +446,9 @@ export default {
       &--submit {
         order: 100;
       }
+      &--file {
+        padding: 0.2rem 0;
+      }
     }
     &__label {
       font-size: 1.4rem;
@@ -457,6 +466,9 @@ export default {
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 1.6rem;
       &-input {
+        font-size: 1.4rem;
+      }
+      &-label {
         font-size: 1.4rem;
       }
     }

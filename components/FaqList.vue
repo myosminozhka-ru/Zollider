@@ -61,16 +61,23 @@ export default {
 <style lang="scss" scoped>
   .list {
     display: flex;
-    gap: 4rem;
+    justify-content: space-between;
     &__col {
-      width: 50%;
+      width: calc(50% - 2rem);
       display: flex;
       flex-direction: column;
-      gap: 3.2rem;
+    }
+    &__item {
+      margin-bottom: 3.2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     &__question {
-      padding: 3rem 2.4rem;
+      padding: 1rem 2.4rem;
+      min-height: 9.08rem;
       font-size: 1.8rem;
+      font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -86,6 +93,7 @@ export default {
       width: 2.5rem;
       height: 2.5rem;
       position: relative;
+      margin-left: 2rem;
       &::before, &::after {
         content: '';
         display: inline-block;
@@ -119,11 +127,21 @@ export default {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 1.6rem;
+        margin-bottom: 1.6rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &__item {
+        margin-bottom: 1.6rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
       &__question {
-        padding: 1.6rem 2.4rem;
+        padding: 1.4rem 2.4rem;
         font-size: 1.6rem;
+        min-height: 10.48rem;
       }
       &__answer {
         font-size: 1.6rem;

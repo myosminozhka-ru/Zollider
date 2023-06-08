@@ -40,7 +40,7 @@ export default {}
 </script>
 <style lang="scss" scoped>
 .block {
-  margin-bottom: 14rem;
+  margin-bottom: 0rem;
   overflow: hidden;
   &__title {
     margin-bottom: 5.6rem;
@@ -48,7 +48,7 @@ export default {}
   &__item {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    justify-content: space-between;
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
@@ -77,14 +77,14 @@ export default {}
     }
   }
   &__img {
-    width: 50%;
+    width: calc(50% - 2rem);
     img {
       max-width: none;
       position: relative;
     }
   }
   &__relative {
-    width: 50%;
+    width: calc(50% - 2rem);
     position: relative;
     z-index: 2;
   }

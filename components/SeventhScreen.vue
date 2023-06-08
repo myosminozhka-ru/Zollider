@@ -3,11 +3,11 @@
     <div class="container">
       <div class="block__inner wow slow fadeInUp">
         <div class="block__left wow slow fadeInUp">
-          <div class="h3 block__title">
+          <div class="h1 block__title">
             <h3>Совет</h3>
           </div>
           <div class="block__text">Если чек очень длинный, сделайте фото его нижней части <br class="only-pc"> с QR-кодом</div>
-          <a href="#podajte-zayavku" class="btn btn--dark">Зарегистрировать чек</a>
+          <a href="#podajte-zayavku" class="btn btn--fix btn--dark">Зарегистрировать чек</a>
         </div>
         <div class="block__right">
           <div class="block__img">
@@ -28,8 +28,8 @@ export default {
 </script>
 <style lang="scss" scoped>
   .block {
-    padding-top: 9rem;
-    margin-bottom: 12.7rem;
+    padding-top: 3.8rem;
+    margin-bottom: 14.2rem;
     &__inner {
       display: flex;
       justify-content: space-between;
@@ -42,13 +42,16 @@ export default {
       width: 73.3rem;
       position: relative;
       z-index: 2;
-      padding: 8rem 7rem;
+      padding: 5.7rem 9.2rem;
+      padding-right: 0;
+      padding-bottom: 4.8rem;
     }
     &__title {
-      margin-bottom: 1.6rem;
+      margin-bottom: 0.6rem;
     }
     &__text {
-      margin-bottom: 6.4rem;
+      font-size: 1.8rem;
+      margin-bottom: 5rem;
     }
     &__right {
       width: 50%;
@@ -65,8 +68,8 @@ export default {
     }
     &__qr-code {
       position: absolute;
-      right: 37rem;
-      top: 20rem;
+      right: 36.3rem;
+      top: 17.2rem;
       width: 14.4rem;
       height: 14.4rem;
       img {
@@ -92,11 +95,12 @@ export default {
         margin-bottom: 0.8rem;
       }
       &__text {
+        font-size: 1.6rem;
         margin-bottom: 2.4rem;
       }
       &__right {
         width: 100%;
-        padding-top: 1.2rem;
+        padding-top: 3rem;
       }
       &__img {
         width: 100%;

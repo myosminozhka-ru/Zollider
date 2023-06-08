@@ -45,7 +45,9 @@ export default {
       align-items: center;
       justify-content: space-between;
       background-color: #fff;
-      gap: 3.2rem;
+      .btn {
+        margin-left: 3.2rem;
+      }
     }
     &__text {
       color: $dark-text;
@@ -58,7 +60,9 @@ export default {
         flex-direction: column;
         align-items: stretch;
         background-color: #fff;
-        gap: 2.4rem;
+        .btn {
+          margin-left: 2.4rem;
+        }
       }
       &__text {
         font-size: 1.4rem;

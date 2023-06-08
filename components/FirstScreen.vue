@@ -61,7 +61,7 @@ export default {
     }
     &__text {
       font-size: 1.8rem;
-      max-width: 67.1rem;
+      max-width: 67.2rem;
       margin-bottom: 8rem;
     }
     &__subtitle {
@@ -74,7 +74,12 @@ export default {
     }
     &__btns {
       display: flex;
-      gap: 1.6rem;
+      .btn {
+        margin-right: 1.6rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
     &__img {
       width: 50%;
@@ -123,11 +128,18 @@ export default {
       }
       &__btns {
         flex-direction: column;
+        .btn {
+          margin-right: 0;
+          margin-bottom: 1.6rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
       &__img {
         width: 100%;
         position: static;
-        margin-bottom: 5.2rem;
+        margin-bottom: 5.8rem;
         img {
           display: block;
           left: auto;

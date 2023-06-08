@@ -26,17 +26,17 @@ export default {}
 </script>
 <style lang="scss" scoped>
 .block {
-  margin-bottom: 16.7rem;
+  margin-bottom: 12.3rem;
   position: relative;
   z-index: 2;
   &__inner {
     display: flex;
-    gap: 4rem;
+    justify-content: space-between;
     position: relative;
     z-index: 2;
   }
   &__left {
-    width: 50%;
+    width: calc(50% - 2rem);
   }
   &__img {
     position: relative;
@@ -49,7 +49,7 @@ export default {}
     margin-bottom: 5rem;
   }
   &__right {
-    width: 50%;
+    width: calc(50% - 2rem);
   }
   &__bg {
     position: absolute;
@@ -78,9 +78,10 @@ export default {}
     }
     &__right {
       width: 100%;
+      padding-top: 0.3rem;
     }
     &__bg {
-      top: -5.9rem;
+      top: -4.9rem;
     }
   }
 }
