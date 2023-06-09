@@ -34,22 +34,22 @@ export default {
         {
           id: 1,
           name: 'Правила акции',
-          href: '#',
+          href: '/files/pravila-akcii.pdf',
         },
         {
           id: 2,
           name: 'Политика конфиденциальности',
-          href: '#',
+          href: '/files/politika-konfidencialnosti.pdf',
         },
         {
           id: 3,
           name: 'Пользовательское соглашение',
-          href: '#',
+          href: '/files/polzovatelskoe-soglashenie.pdf',
         },
         {
           id: 4,
           name: 'Правила использования cokies',
-          href: '#',
+          href: '/files/pravila-ispolzovaniya-cokies.pdf',
         },
       ]
     }
