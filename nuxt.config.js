@@ -68,6 +68,8 @@ export default {
     "@nuxtjs/style-resources",
   ],
 
+  serverMiddleware: ['~/api/index'],
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     // fix to work with swiperjs 8 - need to run with standalone:true. That can make some troubles.

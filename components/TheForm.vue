@@ -129,6 +129,7 @@ export default {
       loading: false,
       msg: null,
       validation: null,
+      courses: [],
     }
   },
   methods: {
@@ -295,6 +296,8 @@ export default {
       if (!this.validation.isValid) {
         return
       }
+      this.fetchtest()
+      return
       this.msg = null
       const formData = new FormData(this.$refs.formRegister)
       this.loading = true
@@ -310,6 +313,10 @@ export default {
       }).finally(() => {
         this.loading = false
       })
+    },
+    async fetchtest() {
+      const r = await fetch('/api')
+      console.log(r)
     }
   },
   mounted() {
