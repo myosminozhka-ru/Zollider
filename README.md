@@ -1,5 +1,36 @@
 # Zollider
+## Развернуть на сервере
 
+```bash
+# скорировать переменные окружение с .env.example в .env
+# в .env внести изменения в соответсвии с текущим стендом
+$ cp .env.example .env
+```
+
+```bash
+# скопировать file ecosystem.config.js.example в ecosystem.config.js
+# в ecosystem.config.js внести изменения для работы pm2
+# достаточно задать имя в поле name
+$ cp ecosystem.config.js.example ecosystem.config.js
+```
+
+## Развернуть на GitHub Pages
+
+```bash
+# Синхронизировать локальную ветку с удаленной
+$ git add .
+$ git commit -m "build"
+$ git push
+```
+```bash
+# Сгенерировать стат файлы
+$ yarn generate
+```
+
+```bash
+# Задеплоить
+$ yarn deploy
+```
 ## Build Setup
 
 ```bash
