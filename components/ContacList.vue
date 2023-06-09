@@ -1,6 +1,6 @@
 <template>
   <div class="contacts">
-    <a href="tel:+7(900) 000-00-00" class="contacts__item">
+    <a href="tel:+74959336000" class="contacts__item">
       <svg
         width="24"
         height="24"
@@ -15,7 +15,7 @@
         />
       </svg>
 
-      +7(900) 000-00-00
+      +7(495) 933-60-00
     </a>
     <a href="mailto:info@zolider.com" class="contacts__item" target="_blank">
       <svg

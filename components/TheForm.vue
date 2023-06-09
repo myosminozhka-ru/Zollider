@@ -85,7 +85,7 @@
           <span class="checked"></span>
         </label>
         <div class="form__file-label">
-          Вы можете загрузить 5 фото в формате png, jpg, jpeg размером не более
+          Вы можете загрузить 3 фото в формате png, jpg, jpeg размером не более
           10 МБайт на один файл.
         </div>
       </div>
@@ -273,8 +273,8 @@ export default {
           },
           {
             rule: 'maxFilesCount',
-            value: 5,
-            errorMessage: 'Не более 5 фото',
+            value: 3,
+            errorMessage: 'Не более 3 фото',
           },
           {
             rule: 'files',
