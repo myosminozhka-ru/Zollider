@@ -118,6 +118,7 @@ export default {
       })
     },
     linkHandler(index) {
+      this.closeNav()
       this.activeLinkIndex = index
     }
   },
@@ -191,7 +192,6 @@ export default {
     &__list {
       display: flex;
       align-items: center;
-      gap: 3.2rem;
       margin-right: 8.4rem;
     }
     &__item {
@@ -204,6 +204,10 @@ export default {
       &.active,
       &:hover {
         border-color: $light-text;
+      }
+      margin-right: 3.2rem;
+      &:last-child {
+        margin-right: 0;
       }
     }
     &__burger {
@@ -276,9 +280,8 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        gap: 1.6rem;
         margin-right: 0;
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
       }
       &__item {
         letter-spacing: 0;
@@ -292,6 +295,11 @@ export default {
         &:hover {
           border: none;
           color: $accent;
+        }
+        margin-right: 0;
+        margin-bottom: 1.6rem;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
       &__burger {

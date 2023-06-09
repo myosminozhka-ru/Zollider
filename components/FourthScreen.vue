@@ -1,5 +1,9 @@
 <template>
   <div class="block" id="podajte-zayavku">
+    <div class="block__bg">
+      <img class="only-pc" src="@/assets/img/reg-bg-pc.jpg" alt="">
+      <img class="only-sp" src="@/assets/img/reg-bg-sp.jpg" alt="">
+    </div>
     <div class="container">
       <div class="block__inner">
         <div class="block__left wow slow fadeInUp">
@@ -22,23 +26,36 @@ export default {}
 </script>
 <style lang="scss" scoped>
 .block {
-  margin-bottom: 2.7rem;
+  margin-bottom: 12.3rem;
+  position: relative;
+  z-index: 2;
   &__inner {
     display: flex;
-    gap: 4rem;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
   }
   &__left {
-    width: 50%;
+    width: calc(50% - 2rem);
   }
   &__img {
     position: relative;
     left: -6rem;
+    img {
+      display: none;
+    }
   }
   &__title {
     margin-bottom: 5rem;
   }
   &__right {
-    width: 50%;
+    width: calc(50% - 2rem);
+  }
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 18.7rem;
+    z-index: 1;
   }
   @include mob {
     margin-bottom: 4.8rem;
@@ -51,12 +68,20 @@ export default {}
     &__img {
       position: relative;
       left: 0;
+      img {
+        display: block;
+        opacity: 0;
+      }
     }
     &__title {
       margin-bottom: 5rem;
     }
     &__right {
       width: 100%;
+      padding-top: 0.3rem;
+    }
+    &__bg {
+      top: -4.9rem;
     }
   }
 }

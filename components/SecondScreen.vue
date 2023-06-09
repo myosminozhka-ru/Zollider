@@ -34,17 +34,16 @@ export default {
 </script>
 <style lang="scss" scoped>
   .block {
-    margin-bottom: 3rem;
+    margin-bottom: 3.4rem;
     &__inner {
       display: flex;
       align-items: center;
-      gap: 4rem;
     }
     &__title {
-      width: 50%;
+      width: calc(50% - 2rem);
     }
     &__right {
-      width: 50%;
+      width: calc(50% - 2rem);
     }
     &__imgs {
       position: relative;

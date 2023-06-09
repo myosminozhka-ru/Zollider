@@ -43,11 +43,14 @@ export default {}
 .contacts {
   display: inline-flex;
   flex-direction: column;
-  gap: 2.4rem;
   &__item {
     display: inline-flex;
     align-items: center;
     transition: color 300ms;
+    margin-bottom: 2.4rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
     svg {
       width: 2.4rem;
       height: 2.4rem;
@@ -66,7 +69,10 @@ export default {}
   }
   @include mob {
     font-size: 1.4rem;
-    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

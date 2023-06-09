@@ -47,7 +47,7 @@ export default {}
 </script>
 <style lang="scss" scoped>
 .block {
-  margin-bottom: 10rem;
+  margin-bottom: 10.4rem;
   &__top {
     margin-bottom: 5.6rem;
   }
@@ -57,6 +57,9 @@ export default {}
   &__text {
     font-size: 1.8rem;
     margin-bottom: 2.7rem;
+    a {
+      text-decoration: underline;
+    }
     &:last-child {
       margin-bottom: 0;
     }

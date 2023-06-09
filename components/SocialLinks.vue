@@ -20,7 +20,6 @@ export default {
 <style lang="scss">
   .social-link {
     display: inline-flex;
-    gap: 2.4rem;
     &__item {
       display: inline-block;
       width: 2.4rem;
@@ -37,6 +36,10 @@ export default {
         path {
           fill: $accent;
         }
+      }
+      margin-right: 2.4rem;
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

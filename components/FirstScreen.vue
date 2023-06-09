@@ -1,5 +1,8 @@
 <template>
   <div class="block">
+    <div class="block__bg">
+      <img src="@/assets/img/main-bg-pc.jpg" alt="">
+    </div>
     <div class="container">
       <div class="block__inner">
         <div class="block__content">
@@ -39,8 +42,11 @@ export default {
   .block {
     padding-bottom: 9.6rem;
     margin-bottom: 15.6rem;
+    position: relative;
+    z-index: 2;
     &__inner {
       position: relative;
+      z-index: 2;
     }
     &__content {
       padding-top: 20rem;
@@ -55,7 +61,7 @@ export default {
     }
     &__text {
       font-size: 1.8rem;
-      max-width: 67.1rem;
+      max-width: 67.2rem;
       margin-bottom: 8rem;
     }
     &__subtitle {
@@ -68,7 +74,12 @@ export default {
     }
     &__btns {
       display: flex;
-      gap: 1.6rem;
+      .btn {
+        margin-right: 1.6rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
     &__img {
       width: 50%;
@@ -81,7 +92,14 @@ export default {
         left: 5rem;
         top: 12rem;
         transform: scale(1.2566);
+        display: none;
       }
+    }
+    &__bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
     }
     @include mob {
       overflow: hidden;
@@ -110,16 +128,27 @@ export default {
       }
       &__btns {
         flex-direction: column;
+        .btn {
+          margin-right: 0;
+          margin-bottom: 1.6rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
       &__img {
         width: 100%;
         position: static;
-        margin-bottom: 5.2rem;
+        margin-bottom: 5.8rem;
         img {
+          display: block;
           left: auto;
           top: 1.3rem;
           transform: scale(1.2);
         }
+      }
+      &__bg {
+        display: none;
       }
     }
   }

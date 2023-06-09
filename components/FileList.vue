@@ -25,7 +25,7 @@ export default {
   .list {
     display: grid;
     grid-template-columns: repeat(2, 30rem);
-    grid-gap: 0.4rem 1.6rem;
+    grid-gap: 0.4rem 1rem;
     &__item {
       display: inline-flex;
       align-items: center;

@@ -62,11 +62,11 @@ export default {
     &__inner {
       display: grid;
       grid-template-columns: 1fr 3fr;
-      grid-gap: 4.8rem 4rem;
+      grid-gap: 4.8rem 1.3rem;
     }
     &__logo {
       width: 17.5rem;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
     &__contactlist {
       margin-bottom: 2.4rem;
@@ -89,11 +89,11 @@ export default {
       &__inner {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 2.4rem;
+        grid-gap: 1.8rem;
       }
       &__logo {
         width: 11.2rem;
-        margin-bottom: 2.4rem;
+        margin-bottom: 1.8rem;
       }
       &__contactlist {
         margin-bottom: 0.8rem;
@@ -102,17 +102,19 @@ export default {
         font-size: 1.6rem;
       }
       &__text {
+        line-height: 1.57;
         font-size: 1.4rem;
       }
       &__copy {
         font-size: 1.4rem;
+        padding-top: 0.7rem;
       }
       &__files {
         flex-direction: column;
         align-items: stretch;
-        gap: 1.6rem;
       }
       &__osmi-logo {
+        margin-top: 1.6rem;
         width: 15rem;
       }
     }

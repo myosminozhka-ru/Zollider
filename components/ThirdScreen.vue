@@ -44,6 +44,7 @@ export default {
       margin-bottom: 1.6rem;
     }
     &__text {
+      font-size: 1.8rem;
       margin-bottom: 6.4rem;
     }
     &__right {
@@ -57,7 +58,9 @@ export default {
     }
     @include mob {
       padding-top: 0;
-      margin-bottom: 12.7rem;
+      margin-bottom: 4.7rem;
+      position: relative;
+      z-index: 3;
       &__inner {
         background-image: url(@/assets/img/prize-bg-sp.jpg);
         padding: 0;
@@ -71,7 +74,8 @@ export default {
         margin-bottom: 0.8rem;
       }
       &__text {
-        margin-bottom: 2.4rem;
+        line-height: 1.4;
+        margin-bottom: 2.1rem;
       }
       &__right {
         width: 100%;
