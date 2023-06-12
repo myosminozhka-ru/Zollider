@@ -18,8 +18,11 @@
     "generateW": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.25.3",
+    "express": "^4.18.2",
     "just-validate": "^4.2.0",
+    "nodemailer": "^6.9.3",
     "nuxt": "^2.15.8",
     "sass": "1.54.9",
     "sass-loader": "10",
