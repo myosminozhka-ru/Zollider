@@ -267,6 +267,10 @@ input[type="number"] {
       background-color: #2F7371;
     }
   }
+  &:disabled {
+    cursor: default;
+    background-color: #8C9091;
+  }
   @include mob {
     display: flex;
     font-size: 1.6rem;
