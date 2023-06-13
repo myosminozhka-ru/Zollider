@@ -3,9 +3,9 @@
     <div class="container">
       <div class="header__inner">
         <div class="header__mask" :class="{hide: hideMask, none: noneMask}"></div>
-        <div class="header__logo">
+        <nuxt-link to="/" class="header__logo">
           <img class="from" :class="{to: toLogo}" src="@/assets/ico/logo.svg" alt="logo">
-        </div>
+        </nuxt-link>
         <nav 
           class="header__nav" 
           :class="{active: isNavOpen}"

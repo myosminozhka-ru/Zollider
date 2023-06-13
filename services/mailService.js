@@ -15,8 +15,8 @@ class MailService {
 
     async sendActivationMail(data, check, img) {
         await this.transporter.sendMail({
-            from: 'arstanbek353@yandex.ru',
-            to: 'arstanbek353@yandex.ru',
+            from: process.env.SMTP_USER,
+            to: process.env.SMTP_USER,
             subject: `Золлидер чек`,
             text: '',
             html: `
