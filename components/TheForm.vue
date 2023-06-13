@@ -1,5 +1,10 @@
 <template>
-  <form class="form" id="form-register" ref="formRegister" @submit.prevent="submit">
+  <form
+    class="form"
+    id="form-register"
+    ref="formRegister"
+    @submit.prevent="submit"
+  >
     <div class="form__item">
       <label for="name" class="form__label">ФИО*</label>
       <input
@@ -43,7 +48,14 @@
     <div class="form__item form__item--file">
       <div class="form__file">
         <label class="form__file-input">
-          <input type="file" id="check" name="check" class="visually-hidden" accept="image/png, image/jpeg, image/jpg, image/heic" required/>
+          <input
+            type="file"
+            id="check"
+            name="check"
+            class="visually-hidden"
+            accept="image/png, image/jpeg, image/jpg, image/heic"
+            required
+          />
           Приложить фотографию чека
           <span class="checked"></span>
         </label>
@@ -80,7 +92,15 @@
     <div class="form__item form__item--file">
       <div class="form__file">
         <label class="form__file-input">
-          <input type="file" id="img" name="img" class="visually-hidden" accept="image/png, image/jpeg, image/jpg, image/heic" required multiple/>
+          <input
+            type="file"
+            id="img"
+            name="img"
+            class="visually-hidden"
+            accept="image/png, image/jpeg, image/jpg, image/heic"
+            required
+            multiple
+          />
           Приложить фотографии
           <span class="checked"></span>
         </label>
@@ -91,7 +111,11 @@
       </div>
     </div>
     <div class="form__item form__item--submit">
-      <button class="btn btn--accent form__submit" :disabled="loading" type="submit">
+      <button
+        class="btn btn--accent form__submit"
+        :disabled="loading"
+        type="submit"
+      >
         Оставить завку
       </button>
     </div>
@@ -112,16 +136,23 @@
         </div>
       </div>
     </div>
-    <div v-if="msg === true || msg === false" class="form__item form__item--msg">
-      <div v-if="msg ===  true" class="form__success">Спасибо, ваше сообщение отправлено</div>
-      <div v-if="msg ===  false" class="form__error">Возникла ошибка отправки, попробуйте позже</div>
+    <div
+      v-if="msg === true || msg === false"
+      class="form__item form__item--msg"
+    >
+      <div v-if="msg === true" class="form__success">
+        Спасибо, ваше сообщение отправлено
+      </div>
+      <div v-if="msg === false" class="form__error">
+        Возникла ошибка отправки, попробуйте позже
+      </div>
     </div>
   </form>
 </template>
 <script>
-import JustValidate from 'just-validate';
+import JustValidate from 'just-validate'
 import validationLocal from '@/validate/validationLocal.js'
-const {keys, dictLocale} = validationLocal
+const { keys, dictLocale } = validationLocal
 
 export default {
   data() {
@@ -143,9 +174,9 @@ export default {
             position: 'top',
           },
         },
-        dictLocale
+        dictLocale,
       )
-      validation.setCurrentLocale('ru');
+      validation.setCurrentLocale('ru')
       validation
         .addField('[name="name"]', [
           {
@@ -260,7 +291,13 @@ export default {
                 extensions: ['jpeg', 'jpg', 'png', 'HEIC', 'heic'],
                 maxSize: 10000000,
                 minSize: 100,
-                types: ['image/jpeg', 'image/jpg', 'image/png', 'image/HEIC', 'image/heic'],
+                types: [
+                  'image/jpeg',
+                  'image/jpg',
+                  'image/png',
+                  'image/HEIC',
+                  'image/heic',
+                ],
               },
             },
             errorMessage: 'Неверный формат или размер файла больше 10МБ',
@@ -284,7 +321,13 @@ export default {
                 extensions: ['jpeg', 'jpg', 'png', 'HEIC', 'heic'],
                 maxSize: 10000000,
                 minSize: 100,
-                types: ['image/jpeg', 'image/jpg', 'image/png', 'image/HEIC', 'image/heic'],
+                types: [
+                  'image/jpeg',
+                  'image/jpg',
+                  'image/png',
+                  'image/HEIC',
+                  'image/heic',
+                ],
               },
             },
             errorMessage: 'Неверный формат или размер файла больше 10МБ',
@@ -293,31 +336,49 @@ export default {
       return validation
     },
     submit() {
+      console.log('submit start')
       if (!this.validation.isValid) {
+        console.log('no valid')
         return
       }
-      this.fetchtest()
-      return
       this.msg = null
       const formData = new FormData(this.$refs.formRegister)
+      this.fetchtest(formData)
+      return
       this.loading = true
       return fetch('/ajax/form_send.php', {
         method: 'POST',
         body: formData,
-      }).then(response => {
-        return response.json()
-      }).then(data => {
-        this.msg = true
-      }).catch(e => {
-        this.msg = false
-      }).finally(() => {
-        this.loading = false
       })
+        .then((response) => {
+          return response.json()
+        })
+        .then((data) => {
+          this.msg = true
+        })
+        .catch((e) => {
+          this.msg = false
+        })
+        .finally(() => {
+          this.loading = false
+        })
     },
-    async fetchtest() {
-      const r = await fetch('/api')
-      console.log(r)
-    }
+    async fetchtest(formData) {
+      const r = await this.$axios({
+        method: 'post',
+        url: '/api',
+        data: formData,
+        headers: { 'Content-Type': 'multipart/form-data' },
+      })
+        .then(function (response) {
+          //handle success
+          console.log(response)
+        })
+        .catch(function (response) {
+          //handle error
+          console.log(response)
+        })
+    },
   },
   mounted() {
     this.validation = this.init()
@@ -359,10 +420,10 @@ export default {
     background-size: 2.4rem;
     background-position: center right 2.4rem;
     &:focus {
-      border: 1px solid #3C3C3B;
+      border: 1px solid #3c3c3b;
     }
     &.just-validate-error-field {
-      border: 1px solid #AA182C;
+      border: 1px solid #aa182c;
       background-image: url(@/assets/ico/field-error.svg);
     }
     &.just-validate-success-field {
@@ -439,7 +500,7 @@ export default {
   }
   &__error {
     font-size: 2.6rem;
-    color: #AA182C;
+    color: #aa182c;
   }
   @include mob {
     grid-template-columns: repeat(1, 1fr);
@@ -488,4 +549,3 @@ export default {
   }
 }
 </style>
-

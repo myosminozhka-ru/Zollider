@@ -8,7 +8,7 @@ export default {
 
   server: {
     host: "0.0.0.0", // default: localhost // (0.0.0.0 for open on mob) // 127.0.0.1 for prod
-    port: 3021,
+    port: process.env.PORT,
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -66,6 +66,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     "@nuxtjs/style-resources",
+    "@nuxtjs/axios",
   ],
 
   serverMiddleware: ['~/api/index'],
