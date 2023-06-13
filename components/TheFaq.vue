@@ -7,7 +7,7 @@
       <div class="faq__list">
         <FaqList :faqs="faqs"/>
       </div>
-      <div class="faq__footer wow slow fadeInUp">
+      <div v-if="page !== 'detail'" class="faq__footer wow slow fadeInUp">
         <nuxt-link to="/faq" class="btn btn--fix btn--accent">Смотреть все вопросы</nuxt-link>
       </div>
     </div>
@@ -19,6 +19,10 @@ export default {
     faqs: {
       type: Array,
       default: () => [],
+    },
+    page: {
+      type: String,
+      default: '',
     }
   }
 }
