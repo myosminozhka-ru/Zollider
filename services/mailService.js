@@ -13,6 +13,15 @@ class MailService {
         })
     }
 
+    // fileName(array) {
+    //   return array.map(i => {
+    //     return {
+    //       ...i,
+    //       filename: i.
+    //     }
+    //   })
+    // }
+
     async sendActivationMail(data, check, img) {
         await this.transporter.sendMail({
             from: 'arstanbek353@yandex.ru',
