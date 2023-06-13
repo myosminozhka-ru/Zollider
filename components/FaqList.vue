@@ -120,6 +120,9 @@ export default {
       font-size: 1.8rem;
       border: 1px solid #8C9091;
       border-top: 0;
+      ::v-deep a {
+        color: $accent;
+      }
     }
     @include mob {
       flex-direction: column;
