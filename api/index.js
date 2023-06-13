@@ -19,6 +19,6 @@ app.post('/', cpUpload, async function(req, res, next){
 });
 
 module.exports = {
-  path: '/api',
+  path: '/api/',
   handler: app,
 }

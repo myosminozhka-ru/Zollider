@@ -20,6 +20,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' },
       { hid: 'description', name: 'description', content: 'Zollider' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'msapplication-TileColor', content: '#da532c' },
