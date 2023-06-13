@@ -113,7 +113,7 @@
     <div class="form__item form__item--submit">
       <button
         class="btn btn--accent form__submit"
-        :disabled="loading"
+        :disabled="loading || !this.validation?.isValid"
         type="submit"
       >
         Оставить завку
