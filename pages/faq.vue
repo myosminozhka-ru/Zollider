@@ -1,6 +1,6 @@
 <template>
   <div class="FaqPage">
-    <TheFaq :faqs="faqs"/>
+    <TheFaq :faqs="faqs" :page="'detail'"/>
   </div>
 </template>
 

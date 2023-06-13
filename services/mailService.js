@@ -22,22 +22,22 @@ class MailService {
             html: `
                 <div>
                   <h4>ФИО</h4>
-                  <h6><b>${data.name}</b></h6>
+                  <h5><b>${data.name}</b></h5>
                   <hr />
                   <h4>Возраст заявителя</h4>
-                  <h6><b>${data.age}</b></h6>
+                  <h5><b>${data.age}</b></h5>
                   <hr />
                   <h4>E-mail</h4>
-                  <h6><b>${data.email}</b></h6>
+                  <h5><b>${data.email}</b></h5>
                   <hr />
                   <h4>Телефон</h4>
-                  <h6><b>${data.tel}</b></h6>
+                  <h5><b>${data.tel}</b></h5>
                   <hr />
                   <h4>Расскажите о вашей семье</h4>
-                  <h6><b>${data.family}</b></h6>
+                  <h5><b>${data.family}</b></h5>
                   <hr />
                   <h4>Что планируете ремонтировать и как?</h4>
-                  <h6><b>${data.comment}</b></h6>
+                  <h5><b>${data.comment}</b></h5>
                 </div>
             `,
             attachments: [
