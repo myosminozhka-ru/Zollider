@@ -18,7 +18,7 @@ app.get('/', function(req, res){
 });
 
 app.post('/', cpUpload, async function(req, res, next){
-  await mailService.sendActivationMail(req.body)
+  await mailService.sendActivationMail(req.body, req.files.check, req.files.img)
   res.send(JSON.stringify(req.body));
 });
 

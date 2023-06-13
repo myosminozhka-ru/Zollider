@@ -13,7 +13,7 @@ class MailService {
         })
     }
 
-    async sendActivationMail(data) {
+    async sendActivationMail(data, check, img) {
         await this.transporter.sendMail({
             from: 'arstanbek353@yandex.ru',
             to: 'arstanbek353@yandex.ru',
@@ -40,7 +40,11 @@ class MailService {
                   <h2><b>${data.comment}</b></h2>
                   <br /><br />
                 </div>
-            `
+            `,
+            attachments: [
+              ...check, 
+              ...img,
+            ]
         })
     }
 }
