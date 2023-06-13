@@ -1,9 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
 
   router: {
-    base: '/Zollider/'
+    base: '/'
   },
 
   server: {
@@ -26,16 +26,16 @@ export default {
       { name: 'theme-color', content: '#ffffff' },
     ],
     script: [
-      { src: '/Zollider/wow.js' },
-      { src: '/Zollider/imask.js' },
+      { src: '/wow.js' },
+      { src: '/imask.js' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/Zollider/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/Zollider/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', href: '/Zollider/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', href: '/Zollider/favicon-16x16.png' },
-      { rel: 'manifest', href: '/Zollider/site.webmanifest' },
-      { rel: 'mask-icon', color: '#5bbad5', href: '/Zollider/safari-pinned-tab.svg' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', href: '/favicon-16x16.png' },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'mask-icon', color: '#5bbad5', href: '/safari-pinned-tab.svg' },
     ]
   },
 
