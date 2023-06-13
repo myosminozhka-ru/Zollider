@@ -353,12 +353,12 @@ export default {
         data: formData,
         headers: { 'Content-Type': 'multipart/form-data' },
       })
-        .then(function (response) {
+        .then((response) => {
           //handle success
           this.msg = true
           console.log(response)
         })
-        .catch(function (response) {
+        .catch((response) => {
           //handle error
           this.msg = false
           console.log(response)

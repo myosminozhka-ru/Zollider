@@ -13,15 +13,6 @@ class MailService {
         })
     }
 
-    // fileName(array) {
-    //   return array.map(i => {
-    //     return {
-    //       ...i,
-    //       filename: i.
-    //     }
-    //   })
-    // }
-
     async sendActivationMail(data, check, img) {
         await this.transporter.sendMail({
             from: 'arstanbek353@yandex.ru',
@@ -30,24 +21,23 @@ class MailService {
             text: '',
             html: `
                 <div>
-                  <h1>ФИО</h1>
-                  <h2><b>${data.name}</b></h2>
-                  <br /><br />
-                  <h1>Возраст заявителя</h1>
-                  <h2><b>${data.age}</b></h2>
-                  <br /><br />
-                  <h1>E-mail</h1>
-                  <h2><b>${data.email}</b></h2>
-                  <br /><br />
-                  <h1>Телефон</h1>
-                  <h2><b>${data.tel}</b></h2>
-                  <br /><br />
-                  <h1>Расскажите о вашей семье</h1>
-                  <h2><b>${data.family}</b></h2>
-                  <br /><br />
-                  <h1>Что планируете ремонтировать и как?</h1>
-                  <h2><b>${data.comment}</b></h2>
-                  <br /><br />
+                  <h4>ФИО</h4>
+                  <h6><b>${data.name}</b></h6>
+                  <hr />
+                  <h4>Возраст заявителя</h4>
+                  <h6><b>${data.age}</b></h6>
+                  <hr />
+                  <h4>E-mail</h4>
+                  <h6><b>${data.email}</b></h6>
+                  <hr />
+                  <h4>Телефон</h4>
+                  <h6><b>${data.tel}</b></h6>
+                  <hr />
+                  <h4>Расскажите о вашей семье</h4>
+                  <h6><b>${data.family}</b></h6>
+                  <hr />
+                  <h4>Что планируете ремонтировать и как?</h4>
+                  <h6><b>${data.comment}</b></h6>
                 </div>
             `,
             attachments: [
