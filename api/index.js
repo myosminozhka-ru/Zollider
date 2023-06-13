@@ -13,6 +13,10 @@ const app = express()
 
 const cpUpload = upload.fields([{ name: 'check', maxCount: 1 }, { name: 'img', maxCount: 3 }])
 
+app.get('/', function(req, res){
+  res.json({test: 'test'});
+});
+
 app.post('/', cpUpload, async function(req, res, next){
   await mailService.sendActivationMail(req.body)
   res.send(JSON.stringify(req.body));
