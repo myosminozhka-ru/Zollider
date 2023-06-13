@@ -341,29 +341,12 @@ export default {
         console.log('no valid')
         return
       }
-      this.msg = null
       const formData = new FormData(this.$refs.formRegister)
       this.fetchtest(formData)
-      return
-      this.loading = true
-      return fetch('/ajax/form_send.php', {
-        method: 'POST',
-        body: formData,
-      })
-        .then((response) => {
-          return response.json()
-        })
-        .then((data) => {
-          this.msg = true
-        })
-        .catch((e) => {
-          this.msg = false
-        })
-        .finally(() => {
-          this.loading = false
-        })
     },
     async fetchtest(formData) {
+      this.msg = null
+      this.loading = true
       const r = await this.$axios({
         method: 'post',
         url: '/api',
@@ -372,11 +355,16 @@ export default {
       })
         .then(function (response) {
           //handle success
+          this.msg = true
           console.log(response)
         })
         .catch(function (response) {
           //handle error
+          this.msg = false
           console.log(response)
+        })
+        .finally(() => {
+          this.loading = false
         })
     },
   },
