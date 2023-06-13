@@ -94,3 +94,6 @@ ecosystem.config.js
 
 # pdf files
 static/files
+
+# uploads
+uploads
