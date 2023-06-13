@@ -55,6 +55,9 @@ export default {
   plugins: [
     // { src: "@/plugins/smooth.js", ssr: false,}
   ],
+  axios: {
+    baseURL: process.env.URL,
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
