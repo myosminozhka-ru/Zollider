@@ -87,10 +87,8 @@ export default {
         },
       ];
     },
-    babel: {
-      plugins: [
-        '@babel/plugin-proposal-optional-chaining'
-      ]
-    }
+    transpile: [
+      'just-validate',
+    ],
   },
 }
