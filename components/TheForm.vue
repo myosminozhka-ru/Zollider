@@ -195,7 +195,7 @@ export default {
           },
           {
             rule: 'customRegexp',
-            value: /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/gi,
+            value: /^[a-zA-Zа-яА-Я'-]+ [a-zA-Zа-яА-Я'-]+ ?[a-zA-Zа-яА-Я'-]*$/gi,
             errorMessage: keys.name,
           },
         ])
@@ -236,7 +236,8 @@ export default {
             errorMessage: keys.emailRequired,
           },
           {
-            rule: 'email',
+            rule: 'customRegexp',
+            value: /^[a-zA-Zа-яА-Я\d]+([\.-\d]?[a-zA-Zа-яА-Я\d]+)*@[a-zA-Zа-яА-Я\d]+([\.-\d]?[a-zA-Zа-яА-Я\d]+)*(\.[a-zA-Zа-яА-Я]{2,3})+$/gi,
             errorMessage: keys.email,
           },
         ])
