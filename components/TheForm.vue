@@ -338,7 +338,7 @@ export default {
     },
     submit() {
       console.log('submit start')
-      if (!this.validation.isValid) {
+      if (!this.validation?.isValid) {
         console.log('no valid')
         return
       }
@@ -370,7 +370,9 @@ export default {
     },
   },
   mounted() {
-    this.validation = this.init()
+    if (process.client) {
+      this.validation = this.init()
+    }
   },
 }
 </script>
