@@ -75,6 +75,7 @@ export default {
       }
       &__text {
         line-height: 1.4;
+        font-size: 1.6rem;
         margin-bottom: 2.1rem;
       }
       &__right {

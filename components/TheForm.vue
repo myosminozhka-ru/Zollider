@@ -195,7 +195,7 @@ export default {
           },
           {
             rule: 'customRegexp',
-            value: /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/gi,
+            value: /^[a-zA-Zа-яА-Я'-]+ [a-zA-Zа-яА-Я'-]+ ?[a-zA-Zа-яА-Я'-]*$/gi,
             errorMessage: keys.name,
           },
         ])
@@ -236,7 +236,8 @@ export default {
             errorMessage: keys.emailRequired,
           },
           {
-            rule: 'email',
+            rule: 'customRegexp',
+            value: /^[a-zA-Zа-яА-Я\d]+([\.-\d]?[a-zA-Zа-яА-Я\d]+)*@[a-zA-Zа-яА-Я\d]+([\.-\d]?[a-zA-Zа-яА-Я\d]+)*(\.[a-zA-Zа-яА-Я]{2,3})+$/gi,
             errorMessage: keys.email,
           },
         ])
@@ -337,7 +338,7 @@ export default {
     },
     submit() {
       console.log('submit start')
-      if (!this.validation.isValid) {
+      if (!this.validation?.isValid) {
         console.log('no valid')
         return
       }
@@ -369,7 +370,9 @@ export default {
     },
   },
   mounted() {
-    this.validation = this.init()
+    if (process.client) {
+      this.validation = this.init()
+    }
   },
 }
 </script>

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="cookies__inner">
         <div class="cookies__text">
-          Мы используем cookie. Это позволяет нам анализировать взаимодействие посетителей с сайтом и делать его лучше. Продолжая пользоваться сайтом, вы соглашаетесь с использованием файлов <a href="#" class="accent-color" target="_blank">cookie</a>.
+          Мы используем cookie. Это позволяет нам анализировать взаимодействие посетителей с сайтом и делать его лучше. Продолжая пользоваться сайтом, вы соглашаетесь с использованием файлов <a href="/files/pravila-ispolzovaniya-cokies.pdf" class="accent-color" target="_blank">cookie</a>.
         </div>
         <button class="btn btn--accent" @click="setAccepted">Хорошо</button>
       </div>
@@ -61,7 +61,8 @@ export default {
         align-items: stretch;
         background-color: #fff;
         .btn {
-          margin-left: 2.4rem;
+          margin-top: 3.2rem;
+          margin-left: 0;
         }
       }
       &__text {
