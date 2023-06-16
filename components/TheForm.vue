@@ -253,7 +253,7 @@ export default {
           },
           {
             rule: 'maxLength',
-            value: 300,
+            value: 2000,
             errorMessage: keys.maxLength,
           },
         ])
@@ -269,7 +269,7 @@ export default {
           },
           {
             rule: 'maxLength',
-            value: 300,
+            value: 2000,
             errorMessage: keys.maxLength,
           },
         ])
