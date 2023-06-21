@@ -71,7 +71,18 @@ export default {
   modules: [
     "@nuxtjs/style-resources",
     "@nuxtjs/axios",
+    '@nuxtjs/gtm',
+    '@nuxtjs/yandex-metrika'
   ],
+  gtm: {
+    id: 'G-GBKYDGTQRT'
+  },
+  yandexMetrika: {
+    id: '53749117',
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true
+  },
 
   serverMiddleware: ['~/api/index'],
 
@@ -87,8 +98,8 @@ export default {
         },
       ];
     },
-    transpile: [
-      'just-validate',
-    ],
+    // transpile: [
+    //   'just-validate',
+    // ],
   },
 }

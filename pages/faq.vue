@@ -151,5 +151,8 @@ export default {
 <style lang="scss">
   .FaqPage {
     padding-top: 20rem;
+    @include mob {
+      padding-top: 10.6rem;
+    }
   }
 </style>

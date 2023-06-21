@@ -1,7 +1,7 @@
 <template>
   <div class="faq" id="faq">
     <div class="container">
-      <div class="h2 faq__title wow slow fadeInUp">
+      <div class="h2 faq__title wow slow fadeInUp" :class="page">
         <h3>FAQ</h3>
       </div>
       <div class="faq__list">
@@ -44,6 +44,9 @@ export default {
       margin-bottom: 4.9rem;
       &__title {
         margin-bottom: 1.6rem;
+        &.detail {
+          font-size: 4rem;
+        }
       }
       &__list {
         margin-bottom: 2.4rem;
