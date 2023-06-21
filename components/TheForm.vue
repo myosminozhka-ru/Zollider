@@ -28,11 +28,13 @@
     <div class="form__item">
       <label for="email" class="form__label">E-mail*</label>
       <input
-        type="email"
+        type="text"
         id="email"
         name="email"
         class="form__input"
         placeholder="E-mail*"
+        role="email"
+        aria-label="email"
       />
     </div>
     <div class="form__item">
@@ -132,7 +134,7 @@
         </label>
         <div>
           Я даю согласие на обработку моих
-          <a href="#">персональных данных</a>
+          <a href="/files/politika-konfidencialnosti.pdf" download="politika-konfidencialnosti.pdf">персональных данных</a>
         </div>
       </div>
     </div>
@@ -237,7 +239,7 @@ export default {
           },
           {
             rule: 'customRegexp',
-            value: /^[a-zA-Zа-яА-Я\d]+([\.-\d]?[a-zA-Zа-яА-Я\d]+)*@[a-zA-Zа-яА-Я\d]+([\.-\d]?[a-zA-Zа-яА-Я\d]+)*(\.[a-zA-Zа-яА-Я]{2,3})+$/gi,
+            value: /(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Zа-яА-Я\-0-9]+\.)+[a-zA-Zа-яА-Я]{2,}))$/gi,
             errorMessage: keys.email,
           },
         ])

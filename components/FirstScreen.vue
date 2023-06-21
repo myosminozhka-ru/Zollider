@@ -82,18 +82,7 @@ export default {
       }
     }
     &__img {
-      width: 50%;
-      position: absolute;
-      z-index: 1;
-      right: 0;
-      top: 0;
-      img {
-        position: relative;
-        left: 5rem;
-        top: 12rem;
-        transform: scale(1.2566);
-        display: none;
-      }
+      display: none;
     }
     &__bg {
       position: absolute;
@@ -113,7 +102,7 @@ export default {
         width: 100%;
       }
       &__title {
-        margin-bottom: 1.6rem;
+        margin-bottom: -0.8rem;
       }
       &__text {
         font-size: 1.6rem;
@@ -137,15 +126,11 @@ export default {
         }
       }
       &__img {
-        width: 100%;
-        position: static;
-        margin-bottom: 5.8rem;
-        img {
-          display: block;
-          left: auto;
-          top: 1.3rem;
-          transform: scale(1.2);
-        }
+        display: block;
+        width: 100vw;
+        position: relative;
+        left: -1.6rem;
+        margin-bottom: -0.4rem;
       }
       &__bg {
         display: none;
