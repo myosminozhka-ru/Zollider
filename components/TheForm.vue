@@ -120,6 +120,13 @@
       >
         Оставить завку
       </button>
+      <button
+        class="btn btn--accent form__submit"
+        type="button"
+        @click="refresh"
+      >
+        refresh
+      </button>
     </div>
     <div class="form__item form__item--privacy">
       <div class="form__conf">
@@ -347,6 +354,19 @@ export default {
       const formData = new FormData(this.$refs.formRegister)
       this.fetchtest(formData)
     },
+    refresh() {
+      this.$refs.formRegister.reset()
+      this.validation.refresh()
+      this.validation.setCurrentLocale('ru')
+      this.msg = null
+      const inputs = document.querySelectorAll('input[type="tel"]')
+      const instances = []
+      inputs.forEach(el => {
+        instances.push(
+          IMask(el, {mask: '+{7 }000-000-00-00'})
+        )
+      })
+    },
     async fetchtest(formData) {
       this.msg = null
       this.loading = true
@@ -361,9 +381,7 @@ export default {
           this.msg = true
           console.log(response)
           setTimeout(() => {
-            this.$refs.formRegister.reset()
-            this.validation.refresh()
-            this.msg = null
+            this.refresh()
           }, 7000)
         })
         .catch((response) => {

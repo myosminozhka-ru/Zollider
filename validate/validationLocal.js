@@ -7,8 +7,8 @@ const keys = {
   integer: 'Value should be a number',
   tel: 'Phone number is invalid',
   name: 'Name is invalid',
-  ageMin: 'Age is invalid',
-  ageMax: 'Age is invalid',
+  ageMin: 'Min age is invalid',
+  ageMax: 'Max age is invalid',
 }
 
 const dictLocale = [
