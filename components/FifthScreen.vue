@@ -6,7 +6,7 @@
           <div class="h2 block__title">
             <h3>Как выиграть?</h3>
           </div>
-          <div class="block__text">* Со списком продукции, участвующей в Акции можно ознакомиться в <a href="#" class="accent-color">Правилах Акции</a></div>
+          <div class="block__text">* Со списком продукции, участвующей в Акции можно ознакомиться в <a href="/files/pravila-akcii.pdf" download="pravila-akcii.pdf" class="accent-color">Правилах Акции</a></div>
         </div>
         <div class="block__list">
           <div class="block__item wow slow fadeInUp">

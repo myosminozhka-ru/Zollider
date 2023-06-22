@@ -121,7 +121,7 @@
         Оставить завку
       </button>
     </div>
-    <div class="form__item">
+    <div class="form__item form__item--privacy">
       <div class="form__conf">
         <label class="form__check">
           <input
@@ -360,6 +360,11 @@ export default {
           //handle success
           this.msg = true
           console.log(response)
+          setTimeout(() => {
+            this.$refs.formRegister.reset()
+            this.validation.refresh()
+            this.msg = null
+          }, 7000)
         })
         .catch((response) => {
           //handle error
@@ -385,6 +390,14 @@ export default {
   grid-gap: 2.4rem 4.1rem;
   align-items: center;
   &__item {
+    position: relative;
+    ::v-deep .just-validate-error-label[data-tooltip=true] {
+      position: absolute !important;
+      top: auto !important;
+      left: 50% !important;
+      bottom: 100% !important;
+      transform: translate(-50%, 2rem) !important;
+    }
     &--file,
     &--textarea,
     &--msg {
@@ -395,6 +408,14 @@ export default {
     }
     &--textarea {
       margin-top: -0.1rem;
+    }
+    &--file ::v-deep .just-validate-error-label[data-tooltip=true] {
+      transform: translate(0, 2rem) !important;
+      left: 0 !important;
+    }
+    &--privacy ::v-deep .just-validate-error-label[data-tooltip=true] {
+      transform: translate(0, 0rem) !important;
+      left: 0 !important;
     }
   }
   &__label {
@@ -499,6 +520,9 @@ export default {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1.6rem;
     &__item {
+      ::v-deep .just-validate-error-label[data-tooltip=true] {
+        font-size: 1.3rem;
+      }
       &--file,
       &--textarea,
       &--msg {
@@ -509,6 +533,9 @@ export default {
       }
       &--file {
         padding: 0.2rem 0;
+      }
+      &--file ::v-deep .just-validate-error-label[data-tooltip=true] {
+        transform: translate(0, 0) !important;
       }
     }
     &__label {
