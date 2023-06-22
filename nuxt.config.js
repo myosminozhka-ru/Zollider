@@ -98,8 +98,8 @@ export default {
         },
       ];
     },
-    // transpile: [
-    //   'just-validate',
-    // ],
+    transpile: [
+      'just-validate',
+    ],
   },
 }
