@@ -120,13 +120,13 @@
       >
         Оставить завку
       </button>
-      <button
+      <!-- <button
         class="btn btn--accent form__submit"
         type="button"
         @click="refresh"
       >
         refresh
-      </button>
+      </button> -->
     </div>
     <div class="form__item form__item--privacy">
       <div class="form__conf">
@@ -170,6 +170,7 @@ export default {
       msg: null,
       validation: null,
       courses: [],
+      mask: [],
     }
   },
   methods: {
@@ -359,6 +360,11 @@ export default {
       this.validation.refresh()
       this.validation.setCurrentLocale('ru')
       this.msg = null
+      this.mask.forEach(i => {
+        i?.masked?.reset()
+      })
+    },
+    initMask() {
       const inputs = document.querySelectorAll('input[type="tel"]')
       const instances = []
       inputs.forEach(el => {
@@ -366,6 +372,7 @@ export default {
           IMask(el, {mask: '+{7 }000-000-00-00'})
         )
       })
+      return instances
     },
     async fetchtest(formData) {
       this.msg = null
@@ -396,7 +403,10 @@ export default {
   },
   mounted() {
     if (process.client) {
-      this.validation = this.init()
+      setTimeout(() => {
+        this.validation = this.init()
+        this.mask = this.initMask()
+      }, 2000)
     }
   },
 }
