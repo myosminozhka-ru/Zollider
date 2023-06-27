@@ -14,7 +14,7 @@ $ cp .env.example .env
 $ cp ecosystem.config.js.example ecosystem.config.js
 ```
 
-## Развернуть на GitHub Pages
+## Развернуть на GitHub Pages (работает только в режиме static)
 
 ```bash
 # Синхронизировать локальную ветку с удаленной
