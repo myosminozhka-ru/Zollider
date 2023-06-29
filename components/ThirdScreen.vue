@@ -7,7 +7,7 @@
             <h3>А ещё не упустите еженедельные призы от Zollider!</h3>
           </div>
           <div class="block__text">Вступайте в нашу группу ВКонтакте и участвуйте в розыгрыше <br class="only-pc"> дополнительных призов каждую неделю.</div>
-          <a href="#" target="_blank" class="btn btn--dark">Подписаться на группу ВК</a>
+          <a href="https://vk.com/zollider" target="_blank" class="btn btn--dark">Подписаться на группу ВК</a>
         </div>
         <div class="block__right">
           <div class="block__img">
